@@ -5,7 +5,6 @@ import 'leaflet/dist/leaflet.css';
 import L from "leaflet";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store";
-import { FaEdit, FaTrash } from 'react-icons/fa'
 
 const EmergencyHome: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -15,7 +14,6 @@ const EmergencyHome: React.FC = () => {
   const usersData = useSelector((state: RootState) => state.user.nearbyUsers.users);
   const loading = useSelector((state: RootState) => state.user.loading);
   const [users, setUsers] = useState<User[]>([])
-  const errorInAPI = useSelector((state: RootState) => state.user.error);
 
   const totalPages = useSelector((state: RootState) => state.user.nearbyUsers.totalPages);
   const currentPage = useSelector((state: RootState) => state.user.nearbyUsers.currentPage);

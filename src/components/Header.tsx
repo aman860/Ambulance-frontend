@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../store/authSlice";
@@ -7,10 +7,10 @@ const Header: React.FC = () => {
   const dispatch = useDispatch();
   const token = useSelector((state: RootState) => state.auth.token);
   const navigate = useNavigate();
-
+  const role = localStorage.getItem('role')
   const handleLogOut = async (e: React.FormEvent) => {
     e.preventDefault();
-    localStorage.removeItem("authToken");
+    localStorage.clear()
     dispatch(logout());
 
     navigate("/login");
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
       <nav className="navbar">
         <div className="navbar-logo">Emergency Help </div>
         <ul className="navbar-links">
-          <li><button type="button" onClick={handleAdminPanel} className="navbar-button">Admin Panel</button></li>
+          {role && role == 'admin' && <li><button type="button" onClick={handleAdminPanel} className="navbar-button">Admin Panel</button></li>}
           {token ? <li><button type="button" onClick={handleLogOut} className="navbar-button">Log Out</button></li> :
             <li><button type="button" onClick={handleLogIn} className="navbar-button">Log In</button></li>}
 

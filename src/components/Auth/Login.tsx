@@ -14,12 +14,16 @@ const Login: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      console.log('ff', process.env.REACT_APP_API_URL)
       const response = await api.post('/auth/login', { username, password });
       dispatch(loginSuccess(response.data.token));
       const role = getRoleFromToken(response.data.token);
       console.log(role, "role")
+       if(role){
+        localStorage.setItem("role", role)
+       }
       if (role == "admin") {
-        navigate("/adminPanel")
+        navigate("/admin-panel")
       } else {
         navigate("/emergency-home")
       }

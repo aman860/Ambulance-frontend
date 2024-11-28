@@ -1,7 +1,6 @@
 // src/redux/userSlice.ts
 
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
 import api from "../utils/api";
 
 // Define the types for user data
@@ -68,6 +67,9 @@ const initialState: UserState = {
 };
 
 // Async Thunks
+// add role
+
+ 
 // Fetch all users
 export const getUsers = createAsyncThunk(
   "users/getUsers",
