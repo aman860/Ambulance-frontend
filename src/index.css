@@ -1,0 +1,191 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #0078d7;
+  color: white;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.login-form h2 {
+  text-align: center;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-buttons button {
+  flex: 1;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+footer {
+  background: #0078d7;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: inline-block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+  }
+}
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+thead {
+  background-color: #0078d7;
+  color: white;
+}
+
+thead th {
+  padding: 1rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #e8f5ff;
+}
+
+td,
+th {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0 0.2rem;
+  font-size: 1.2rem;
+  color: #0078d7;
+}
+
+.actions button:hover {
+  color: #0056a1;
+}
+.navbar-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #ffcc00; /* Gold button color */
+  border: none;
+  border-radius: 5px;
+  color: #0056b3; /* Blue text for contrast */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-button:hover {
+  background-color: #e6b800; /* Darker gold on hover */
+  transform: scale(1.05);
+}
+
+.navbar-button:active {
+  transform: scale(0.95);
+}
+h1 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  
+  background: #f4f4f4;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+ 
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  td,
+  th {
+    padding: 0.5rem;
+  }
+}
